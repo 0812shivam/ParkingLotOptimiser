@@ -19,7 +19,6 @@ def checkParkingSpace(imgPro):
         x, y = pos
 
         imgCrop = imgPro[y:y + height, x:x + width]
-        # cv2.imshow(str(x * y), imgCrop)
         count = cv2.countNonZero(imgCrop)
 
 
@@ -52,6 +51,4 @@ while True:
 
     checkParkingSpace(imgDilate)
     cv2.imshow("Image", img)
-    # cv2.imshow("ImageBlur", imgBlur)
-    # cv2.imshow("ImageThres", imgMedian)
     cv2.waitKey(10)
